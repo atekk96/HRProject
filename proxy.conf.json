@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://api.lot.com/hr/v3/offer/detail/pl",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }

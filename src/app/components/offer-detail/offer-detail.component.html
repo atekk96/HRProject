@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div class="container-fluid">
+            <h3>{{od.title}}</h3>
+            <p style="text-align: center">{{od.company}}</p>
+            <p style="text-align: center">{{od.location}}</p>
+            <p style="text-align: center">Ważna jeszcze: {{od.daysTillExpire}} dni do {{od.expiryDate | date: fullDate}}</p>
+            <h4>Do Twoich zadań będzie należeć: </h4>
+            <div [innerHtml]="od.positionDescription"></div>
+            <h4>Nasze wymagania: </h4>
+            <div [innerHtml]="od.requirements"></div>
+            <h4>Co możemy Ci zaoferować?</h4>
+            <div [innerHtml]="od.opportunities"></div>
+        <div style="text-align:left;padding: 10px">
+        <a href="{{od.applyLink}}" class="btn btn-success" style="color:white;width:120px">Aplikuj</a>
+        </div>
+        <hr/>
+        <div [innerHtml]="od.clause" style="margin-top:10px"></div>
+    </div>
+    </body>
+</html>
+

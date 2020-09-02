@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <div class="container">
+            <h2><p style="text-align: center">Która kategoria Cię interesuje?</p></h2>
+            <mat-card *ngFor="let item of categories">
+                <mat-card-content style="text-align: center"><a style="text-decoration: none; color: #000000;" routerLink="/category/{{item}}">{{item}}</a></mat-card-content>
+            </mat-card>
+        </div>
+    </body>
+</html>

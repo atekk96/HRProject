@@ -1,0 +1,20 @@
+<html>
+<body>
+<div class="container">
+  <div *ngIf="searchTag == false">
+  <mat-card (click)="test(item)" *ngFor="let item of offers | paginate: { itemsPerPage: count, currentPage: p }">
+    <mat-card-content >{{item.title}}, {{item.location}}</mat-card-content>
+  </mat-card>
+  <p style="text-align: center;"><pagination-controls (pageChange)="p = $event"></pagination-controls></p>
+  </div>
+  
+  <div *ngIf="searchTag == true">
+    <mat-card (click)="test(item)" class="mcard" *ngFor="let item of searchResults | paginate: { itemsPerPage: count, currentPage: p }">
+      <mat-card-content style="text-align: center;" >{{item.title}}, {{item.location}}</mat-card-content>
+    </mat-card>
+    <p style="text-align: center;"><pagination-controls (pageChange)="p = $event"></pagination-controls></p>
+  </div>
+</div>
+
+</body>
+  </html>

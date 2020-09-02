@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <span>HR</span>
+  <span class="example-spacer"></span>
+  <mat-form-field appearance="fill">
+    <mat-select (selectionChange)="changeLanguage()" [(value)]="selectedLanguage" >
+      <mat-option value="pl">PL</mat-option>
+      <mat-option value="en">EN</mat-option>
+    </mat-select>
+   </mat-form-field>
+</mat-toolbar>
+    
