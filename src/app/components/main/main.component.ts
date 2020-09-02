@@ -24,9 +24,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.categories = this.route.snapshot.data['category']
-    console.log(this.categories)
     this.ns.language.subscribe(result => {
-      console.log(result)
       this.getCategories();
     })
   }
@@ -43,7 +41,6 @@ export class MainComponent implements OnInit {
     this.categorySubscription = this.os.getCategories(this.ns.currentLanguage).subscribe(result => {
       this.categories = result;
       this.ifLoaded = Promise.resolve(true);
-      console.log(result)
     })
     this.subscriptions.add(this.categorySubscription)
   }

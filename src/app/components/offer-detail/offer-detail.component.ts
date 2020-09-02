@@ -17,7 +17,6 @@ export class OfferDetailComponent implements OnInit {
 
   constructor(private os: OfferService, private ar: ActivatedRoute, private ns: NavService, private route: ActivatedRoute) {
     this.ns.language.subscribe(result => {
-      console.log(result)
       this.getOfferDetail();
     })
     this.ar.params.subscribe(result => {
@@ -37,7 +36,6 @@ export class OfferDetailComponent implements OnInit {
     this.route.snapshot.data['data'].job.opportunities, this.route.snapshot.data['data'].job.positionDescription, publishDate,
     this.route.snapshot.data['data'].job.requirements, this.route.snapshot.data['data'].job.title, Math.floor(Difference_In_Days),
     this.route.snapshot.data['data'].job.experience)
-    console.log(this.od)
   }
 
   getOfferDetail() {
