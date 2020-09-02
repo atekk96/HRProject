@@ -1,6 +1,10 @@
 <html>
 <body>
 <div class="container">
+  <div>
+    <label>Miasto: </label><input (keyup)="search($event)" #a id="a" type="text"/>
+    <label style="padding-left: 20px">Region: </label><input (keyup)="search($event)" #b id="b" type="text"/>
+  </div>
   <div *ngIf="searchTag == false">
   <mat-card (click)="test(item)" *ngFor="let item of offers | paginate: { itemsPerPage: count, currentPage: p }">
     <mat-card-content >{{item.title}}, {{item.location}}</mat-card-content>
